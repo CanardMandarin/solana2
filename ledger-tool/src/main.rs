@@ -3133,7 +3133,6 @@ fn main() {
 
                 let mut output_file = File::create("solana-accounts").unwrap();
                 let system_program = Pubkey::default();
-                
                 let scan_func = |some_account_tuple: Option<(&Pubkey, AccountSharedData, Slot)>| {
                     if let Some((pubkey, account, slot)) = some_account_tuple
                         .filter(|(_, account, _)| Accounts::is_loadable(account.lamports()))
@@ -3143,13 +3142,10 @@ fn main() {
                         }
 
                         total_accounts_stats.accumulate_account(pubkey, &account, rent_collector);
-
-                        for (pubkey, (account, _slot)) in accounts.into_iter() {
-                            if account.lamports() == 0 || *account.owner() != system_program {
-                                continue;
-                            }
-                            output_file.write_all(&pubkey.to_bytes()[0..16]).unwrap();
+                        if account.lamports() == 0 || *account.owner() != system_program {
+                            continue;
                         }
+                        output_file.write_all(&pubkey.to_bytes()[0..16]).unwrap();
                     }
                 };
                 let mut measure = Measure::start("scanning accounts");
