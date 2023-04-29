@@ -3143,7 +3143,7 @@ fn main() {
 
                         total_accounts_stats.accumulate_account(pubkey, &account, rent_collector);
                         if account.lamports() == 0 || *account.owner() != system_program {
-                            continue;
+                            return;
                         }
                         output_file.write_all(&pubkey.to_bytes()[0..16]).unwrap();
                     }
