@@ -346,6 +346,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9ad284aeb45c13f2fb4f084de4a420ebf447423bdf9386c0540ce33cb3ef4b8c"
 
 [[package]]
+name = "array-bytes"
+version = "7.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ede2733fdd21c8fde19f3d16cebc409666f2fc2b623a22c5078a6775708db5de"
+
+[[package]]
 name = "arrayref"
 version = "0.3.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6266,7 +6272,7 @@ dependencies = [
  "ark-bn254 0.3.0",
  "ark-ec 0.3.0",
  "ark-ff 0.3.0",
- "array-bytes",
+ "array-bytes 1.4.1",
  "base64 0.13.1",
  "bincode",
  "bitflags",
@@ -6320,7 +6326,7 @@ dependencies = [
  "ark-ec 0.4.2",
  "ark-ff 0.4.2",
  "ark-serialize 0.4.2",
- "array-bytes",
+ "array-bytes 7.1.0",
  "assert_matches",
  "base64 0.13.1",
  "bincode",
