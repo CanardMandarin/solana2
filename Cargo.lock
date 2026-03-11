@@ -2741,9 +2741,9 @@ checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
 
 [[package]]
 name = "libc"
-version = "0.2.142"
+version = "0.2.183"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6a987beff54b60ffa6d51982e1aa1146bc42f19bd26be28b0586f252fccf5317"
+checksum = "b5b646652bf6661599e1da8901b3b9522896f01e736bad5f723fe7a3a27f899d"
 
 [[package]]
 name = "libloading"
@@ -2934,6 +2934,15 @@ name = "memmap2"
 version = "0.5.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "83faa42c0a078c393f6b29d5db232d8be22776a891f8f56e5284faee4a20b327"
+dependencies = [
+ "libc",
+]
+
+[[package]]
+name = "memmap2"
+version = "0.9.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "714098028fe011992e1c3962653c96b2d578c4b4bce9036e15ff220319b1e0e3"
 dependencies = [
  "libc",
 ]
@@ -5194,7 +5203,7 @@ dependencies = [
  "bv",
  "fs_extra",
  "log",
- "memmap2",
+ "memmap2 0.9.10",
  "modular-bitfield",
  "num_enum 0.6.1",
  "rand 0.7.3",
@@ -5676,7 +5685,7 @@ dependencies = [
  "im",
  "lazy_static",
  "log",
- "memmap2",
+ "memmap2 0.5.10",
  "once_cell",
  "rand_core 0.6.4",
  "rustc_version 0.4.0",
@@ -5707,7 +5716,7 @@ dependencies = [
  "im",
  "lazy_static",
  "log",
- "memmap2",
+ "memmap2 0.9.10",
  "once_cell",
  "rand_core 0.6.4",
  "rustc_version 0.4.0",
@@ -6676,7 +6685,7 @@ dependencies = [
  "log",
  "lru",
  "lz4",
- "memmap2",
+ "memmap2 0.9.10",
  "memoffset 0.8.0",
  "modular-bitfield",
  "num-derive",
@@ -6749,7 +6758,7 @@ dependencies = [
  "lazy_static",
  "libsecp256k1",
  "log",
- "memmap2",
+ "memmap2 0.5.10",
  "num-derive",
  "num-traits",
  "num_enum 0.5.11",
@@ -6803,7 +6812,7 @@ dependencies = [
  "lazy_static",
  "libsecp256k1",
  "log",
- "memmap2",
+ "memmap2 0.9.10",
  "num-derive",
  "num-traits",
  "num_enum 0.6.1",
